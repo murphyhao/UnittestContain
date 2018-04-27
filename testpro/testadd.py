@@ -3,6 +3,7 @@ from common import CommonHead
 from calculator import Count
 
 
+@unittest.skip("")
 class TestAdd(CommonHead):
 
     def test_add(self):
