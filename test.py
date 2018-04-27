@@ -1,13 +1,16 @@
 import unittest
 from calculator import Count
 
-class TestAdd(unittest.TestCase):
+class MyTest(unittest.TestCase):
 
     def setUp(self):
-        print("test add start")
+        print("test case start")
 
     def tearDown(self):
-        print("test add end")
+        print("test case end")
+
+
+class TestAdd(MyTest):
 
     def test_add(self):
         j = Count(2, 3)
@@ -17,13 +20,8 @@ class TestAdd(unittest.TestCase):
         j = Count(41, 76)
         self.assertEqual(j.add(), 117)
 
-class TestSub(unittest.TestCase):
 
-    def setUp(self):
-        print("test sub start")
-
-    def tearDown(self):
-        print("test sub end")
+class TestSub(MyTest):
 
     def test_sub(self):
         j = Count(2, 3)
@@ -35,15 +33,15 @@ class TestSub(unittest.TestCase):
 
 
 if __name__ == '__main__':
-    #unittest.main()
+    unittest.main()
 
     # 构造测试集
-    suite = unittest.TestSuite()
-    suite.addTest(TestAdd("test_add"))
-    suite.addTest(TestAdd("test_add2"))
-    suite.addTest(TestSub("test_sub"))
-    suite.addTest(TestSub("test_sub2"))
+    #suite = unittest.TestSuite()
+    #suite.addTest(TestAdd("test_add"))
+    #suite.addTest(TestAdd("test_add2"))
+    #suite.addTest(TestSub("test_sub"))
+    #suite.addTest(TestSub("test_sub2"))
 
     # 执行测试
-    runner = unittest.TextTestRunner()
-    runner.run(suite)
+    #runner = unittest.TextTestRunner()
+    #runner.run(suite)
