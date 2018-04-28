@@ -1,7 +1,7 @@
 import sys
 import unittest
 
-sys.path.append("E:\\PythonTest\\UnittestContain")
+sys.path.append("../UnittestContain/")
 
 class CommonHead(unittest.TestCase):
 
